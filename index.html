@@ -10,9 +10,40 @@
   <div id = "container">
     <p>Pick a Number between 1-100</p>
     <p id = "output"></p>
+    <p id = "attemptsLeft"></p>
+    <p id = "refresh"></p>
     <input type = "text" id = "userNum">
     <button id = "btn"> Enter </button>
   </div>
+<<<<<<< HEAD
+<script>
+let btn = document.getElementById("btn")
+let ouput = document.getElementById("output")
+let number = [Math.floor(Math.random()*100)]
+let clicksDisplay = document.getElementById("attemptsLeft")
+let clicks = 0
+
+btn.addEventListener("click",function(){  
+  let input = document.getElementById("userNum").value  
+  if(input == number){    
+    output.innerHTML = "You got the number right!"  }
+  else if (input > number){    
+    output.innerHTML = "Your number is too high"  }
+  else if (input < number){    
+    output.innerHTML = "Your number is too low"  }
+    attemptsLeft()});
+
+
+ function attemptsLeft(){  
+   if (clicks < 3){
+     clicks += 1
+     clicksDisplay.innerHTML = "you have " + (3 - clicks) + "attempts left"
+   } else {
+     document.getElementById("refresh").innerText = ("refresh your page and try again")
+   }
+ }
+</script>
+=======
   <script>
       let btn = document.getElementById("btn")
       let ouput = document.getElementById("output")
